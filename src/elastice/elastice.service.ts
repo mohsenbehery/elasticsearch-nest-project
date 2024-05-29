@@ -71,7 +71,6 @@ export class ElasticsearchService {
           },
         },
       });
-      console.log(result);
       const topCustomer =
         result.aggregations.customersWithMostOrders['buckets'][0];
       return topCustomer;
@@ -104,7 +103,6 @@ export class ElasticsearchService {
           },
         },
       });
-      console.log(result);
       const topStock = result.aggregations.stock_with_most_orders['buckets'][0];
       return topStock;
     } catch (error) {

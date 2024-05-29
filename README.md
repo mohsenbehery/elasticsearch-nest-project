@@ -1,30 +1,30 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Elasticsearch NestJS Project
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This project is a NestJS application that interacts with an Elasticsearch index to retrieve various e-commerce data insights.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Features
 
-## Description
+1. **Retrieve Daily Revenue by Date**:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+   - Endpoint: `/elasticsearch/revenue?date={MM/DD/YYYY}`
+   - Description: Returns the total revenue for a given date.
+
+2. **Retrieve Customer with Most Orders on a Specific Day**:
+
+   - Endpoint: `/elasticsearch/customerOrders?date={MM/DD/YYYY}`
+   - Description: Returns the customer who placed the most orders on a specific date.
+
+3. **Retrieve Product with Most Orders on a Specific Day**:
+   - Endpoint: `/elasticsearch/stockOrders?date={MM/DD/YYYY}`
+   - Description: Returns the product that was ordered the most on a specific date, along with the number of orders.
+
+## Setup and Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mohsenbehery/elasticsearch-nest-project
+   cd elasticsearch-nest-project
+   ```
 
 ## Installation
 
@@ -37,37 +37,22 @@ $ npm install
 ```bash
 # development
 $ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+<hr>
 
-```bash
-# unit tests
-$ npm run test
+## Benefits
 
-# e2e tests
-$ npm run test:e2e
+1. Insightful Analytics: By providing daily revenue figures and identifying top customers and products, this application helps businesses understand their sales trends and customer behavior.
+2. Efficiency: Utilizing Elasticsearch's powerful search and aggregation features ensures that the application can handle large datasets and deliver quick results.
+3. Flexibility: The application can be easily extended to include additional features or adapt to different data formats and requirements.
 
-# test coverage
-$ npm run test:cov
-```
+## Use Cases
 
-## Support
+1. Sales Monitoring: Businesses can use this application to monitor their daily sales performance and make informed decisions based on revenue data.
+2. Customer Engagement: By identifying the most active customers, businesses can tailor their marketing and engagement strategies to boost customer loyalty.
+3. Inventory Management: Knowing which products are ordered the most can help businesses manage their inventory more effectively, ensuring that popular items are always in stock.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+<hr>
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+<h1>Overall, this project provides a robust foundation for any e-commerce platform looking to leverage Elasticsearch for insightful data analysis and enhanced business intelligence.</h1>
